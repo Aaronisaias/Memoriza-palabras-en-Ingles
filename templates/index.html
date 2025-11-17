@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudia Ingles con PyMax</title>
+</head>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        font-weight: 300;
+        background-color: #bcc4bf;
+
+    }
+
+    nav {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 80px;
+        align-items: center;
+        background-color: white;
+    }
+
+    nav .logo{
+        background-image: url('https://pymax.net/wp-content/uploads/2020/11/logo-pymax-350.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 120px;
+        height: 60px;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        
+    }
+
+    nav ul li {
+        cursor: pointer;
+        font-weight: 550;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .section-father {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background: linear-gradient(20deg, #e0e4e3, #44cfb1);       
+    }
+
+    .section-father .section-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-father form {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        height: 400px;
+        width: 300px;
+
+    }
+
+    .section-father form div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: auto;
+    }
+
+    .section-father form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 250px;
+    }
+
+    .section-father form button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #44cfb1;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .section-father form button:hover {
+        background-color: #3bb39f;
+    }
+
+    .section-father form h1 {
+        text-align: center;
+    }
+
+    .section-father .section-child h1 {
+        position: relative;
+        top: 50px;
+        font-size: 18px;
+        color: red;
+    }
+
+    .section-father .section-child p {
+        font-size: 40px;
+        font-weight: 800;
+    }
+
+    .section-father .section-child h2 {
+        position: relative;
+        bottom: 50px;
+        font-weight: 500;
+    }
+
+    .section-funcionamiento-father {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        overflow: hidden;
+        align-items: center;
+        width: 100%;
+        background-color: white;
+    }
+
+    .img-presentation {
+        background-image: url("http://www.inmersity.com/destaca/img/IMG-Estudiante_Programa_Inmersity.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 700px;
+        height: 700px;
+    }
+
+    .section-funcionamiento-father article {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        width: 50%;
+        position: relative;
+        left: 50px;
+    }
+
+    .section-funcionamiento-father article h1 {
+        font-size: 50px;
+        font-weight: 400;
+        font-family: 'Courier New', Courier, monospace;
+    }   
+
+    .section-funcionamiento-father article p {
+        font-size: 30px;
+        font-weight: 300;
+        position: relative;
+        bottom: 40px;
+    }
+
+    .section-funcionamiento-father article b {
+        font-weight: 600;
+    }
+
+    .explication-article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: white;
+    }
+
+    .explication-article p {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(0, 0, 0);
+    }
+
+    footer {
+      border-top: #3bb39f 2px solid;
+      padding: 20px;
+      background-color: white;
+    }
+
+    footer p {
+        position: relative;
+        top: 20px;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    footer h1 {
+        font-size: 50px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+
+
+    @media (max-width:600px) {
+        nav .logo{
+        background-image: url('https://pymax.net/wp-content/uploads/2020/11/logo-pymax-350.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 110px;
+        height: 60px;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        
+    }
+
+    nav ul li {
+        cursor: pointer;
+        font-weight: 550;
+        font-size: 14px;
+        position: relative;
+        right: 20px;
+    }
+
+    .section-father {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        background: linear-gradient(10deg, #e0e4e3, #44cfb1);       
+    }
+
+    .section-father form {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        height: 300px;
+        width: 200px;
+        position: relative;
+        right: 5px;
+
+    }
+
+    .section-father form div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: auto;
+    }
+
+    .section-father form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 170px;
+    }
+
+    .section-father form button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #44cfb1;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .section-father form button:hover {
+        background-color: #3bb39f;
+    }
+
+    .section-father form h1 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .section-father .section-child {
+        display: flex;
+        flex-direction: column;
+        width: 130px;
+    }
+
+    .section-father .section-child h1 {
+        position: relative;
+        top: 25px;
+        font-size: 15px;
+        color: red;
+    }
+
+    .section-father .section-child p {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .section-father .section-child h2 {
+        position: relative;
+        top: -25px;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .img-presentation {
+        background-image: url("http://www.inmersity.com/destaca/img/IMG-Estudiante_Programa_Inmersity.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 300px;
+        height: 300px;
+    }
+
+    .section-funcionamiento-father article {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        width: 50%;
+        position: relative;
+        left: 50px;
+    }
+
+    .section-funcionamiento-father article h1 {
+        font-size: 25px;
+        font-weight: 400;
+        font-family: 'Courier New', Courier, monospace;
+    }   
+
+    .section-funcionamiento-father article p {
+        font-size: 15px;
+        font-weight: 300;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .section-funcionamiento-father article b {
+        font-weight: 600;
+    }
+
+    }
+</style>
+<body>
+
+    <nav>
+        <div class="logo"></div>
+        <ul>
+            <a href="#funcionamiento"><li>Como Funciona</li></a>
+            <a href="#estudiar"><li>Comenzar a Estudiar</li></a>
+        </ul>
+    </nav>
+
+    <section class="section-father" id="estudiar">
+        <section class="section-child">
+            <h1>Estudia Ingles con PyMax</h1>
+            <p>La mejor plataforma para aprender <br>ingles desde cero</p>
+            <h2>Todo en un solo Lugar</h2>
+        </section>
+
+        <form method="post">
+            <h1>Memoriza ingles mas Rapido</h1>
+            <div>
+            <input type="text" required name="nombre" placeholder="Nombre*">
+            <input type="text" required name="apellido" placeholder="Apellido*">
+            <input type="email" required name="email" placeholder="Email*">
+            <input type="number" required name="cantidad" placeholder="4*">
+            <button type="submit">Comenzar a Estudiar</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="section-funcionamiento-father" id="funcionamiento">
+       <article>
+        <h1>¿Como Funciona?</h1>
+        <p>PyMax es una plataforma diseñada para ayudarte a Memorizar las palabras en Ingles de Forma mas sencilla, sin usar papeles, sin pedirle Ayuda a nadie, Todo con nuestro Servidor <b>PyMax</b>.</p>        
+       </article>
+
+       <section>
+        <div class="img-presentation"></div>
+       </section>
+    </section>
+
+    <article class="explication-article">
+        <p>Solo debes Registrarte en la plataforma, elegir la cantidad de palabras que deseas memorizar diariamente y comenzar a estudiar. Nuestro sistema se encargara de mostrarte las palabras de forma ordenada para que puedas aprenderlas rapidamente.</p>
+    </article>
+
+    <footer>
+        <p>PyMax fue creado por</p>
+        <h1>Aaron <b>isaias</b></h1>
+    </footer>
+
+    
+</body>
+</html>

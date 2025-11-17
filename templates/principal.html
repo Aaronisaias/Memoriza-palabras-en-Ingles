@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Estudio | PyMax</title>
+</head>
+<style>
+    html, body {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    nav {
+        top: 0;
+        background-color: white;
+        width: 100%;
+        height: 55px;
+        position: fixed;
+    }
+
+    nav div {
+        position: relative;
+        bottom: 10px;
+        background-image: url('https://pymax.net/wp-content/uploads/2020/11/logo-pymax-350.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 120px;
+        height: 80px;
+        margin-left: 20px;
+    }
+
+    .presentacion {
+        margin-top: 50px;
+        width: 100%;
+        height: 600px;
+        background-image: url('https://img.freepik.com/fotos-premium/ilustracion-plana-persona-estudiando-digitalmente-sala-estudio_982935-2027.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .presentacion h1 {
+        color: white;
+        text-align: center;
+        padding-top: 250px;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    .cliente-aviso {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 34px;
+        color: #333;
+    }
+
+    .studio-site {
+        width: 850px;
+        height: 500px;
+        background-image: url("https://tse2.mm.bing.net/th/id/OIP.cnhiRDf4toM-PH1MXDHn2QHaEo?pid=Api&P=0&h=180");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-bottom: 50px;
+        overflow: scroll;
+        box-sizing: border-box;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .studio-site form {
+        display: flex;
+        overflow: scroll;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        color: rgb(5, 5, 5);
+        margin: auto;
+        position: relative;
+        width: 600px;
+        height: 400px;
+        box-sizing: border-box;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.438);
+    }
+
+    .studio-site form div {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .studio-site form input {
+        padding-left: 5px;
+        background: none;
+        border-radius: 4px;
+        color: white;
+    }
+
+    .studio-site form button {
+        width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    .studio-site form button:hover {
+        background-color: #555;
+    }
+
+</style>
+<body>
+    <nav>
+        <div></div>
+    </nav>
+
+    <section class="presentacion">
+        <h1>Con PyMax es mucho mas Sencillo</h1>
+    </section>
+
+    <h1 class="cliente-aviso">Cantidad de Palabras a Aprender Son:{{ cantidad }}</h1>
+    
+    <section class="studio-site">
+        <article>
+            <form method="post">
+                {% for i in range(cantidad) %}
+                    <div>
+                    <label for="spanish_{{ i }}">Ingrese la Palabra en Español Numero {{ i + 1 }}</label>
+                    <input type="text" name="spanish_{{ i }}"id="spanish_{{ i }}" required placeholder="Ej:Gato">
+                    </div>
+
+                    <div>
+                    <label for="english_{{ i }}">Ingrese la Palabra en Ingles Numero {{ i + 1 }}</label>
+                    <input type="text" name="english_{{ i }}"id="english_{{ i }}" required placeholder="Ej:Cat">
+                    </div>
+                {% endfor %}
+
+                <button type="submit">Comenzar a Estudiar</button>
+            </form>
+        </article>
+
+        <article>
+            {% if español and ingles %}
+                <h2>Palabras Ingresadas:</h2>
+                <ul>
+                    {% for esp, eng in pares %}
+                        <li>{{ esp }} - {{ eng }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </article>
+
+    </section>
+
+
+</body>
+</html> |
