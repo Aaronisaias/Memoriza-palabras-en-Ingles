@@ -28,7 +28,7 @@ El usuario escribe una palabra en **español**, su equivalente en **inglés**, y
 ## 📦 Instalación y Uso
 
 ### 1. Clonar el repositorio  
-git clone https://github.com/Aaronisaias/PyMax.git
+git clone [https://github.com/Aaronisaias/PyMax.git](https://github.com/Aaronisaias/Memoriza-palabras-en-Ingles.git)
 2. Entrar al proyecto
 cd PyMax
 3. Instalar dependencias
